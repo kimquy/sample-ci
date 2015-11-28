@@ -1,0 +1,92 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "vendor/**/*"
+    - "bin/*"
+
+  RunRailsCops: true
+  DisplayCopNames: true
+
+Style/SymbolProc:
+  Exclude:
+    - "spec/support/factories.rb"
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+Style/Documentation:
+  Enabled: false
+
+Style/AlignParameters:
+  Enabled: false
+
+Style/BlockEndNewline:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IndentHash:
+  Enabled: false
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+Style/PredicateName:
+  Enabled: false # Doesn't understand `has_secure_token`, though there's promising discussion here: https://github.com/bbatsov/rubocop/issues/1741
+
+Style/Next:
+  Enabled: false
+
+Style/CaseIndentation:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 177 # TODO: Replace with 100
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# TODO: Remove ASAP:
+
+Metrics/ClassLength:
+  Max: 115
+
+Metrics/ParameterLists:
+  Max: 6
+
+Style/DotPosition:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/AccessorMethodName:
+  Enabled: false
+
+Style/AlignArray:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false # At the moment MultiEditble is the problem, for has_many through we'd need to interpolate the join table for Configs and Docs
